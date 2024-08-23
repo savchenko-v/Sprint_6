@@ -8,10 +8,10 @@ from locators.main_page_locator import MainPageLocators
 class TestQuestion:
 
     @allure.title('Раздел "Вопросы о важном"')
-    @pytest.mark.parametrize(QuestionData.param, QuestionData.value)
+    @pytest.mark.parametrize(QuestionData.PARAM, QuestionData.VALUE)
     def test_question(self, driver, number, expected_answer):
 
-        main_page = MainPage(driver)
+        main_page = MainPage(driver, timer=10)
         main_page.scroll_to_last_question()
         main_page.click_to_question(number)
         answer = main_page.wait_and_find_element(MainPageLocators.get_question_answer(number))

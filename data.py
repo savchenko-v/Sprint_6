@@ -9,8 +9,8 @@ class Urls:
 
 
 class QuestionData:
-    param = 'number, expected_answer'
-    value = [
+    PARAM = 'number, expected_answer'
+    VALUE = [
         [0, 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'],
         [1, 'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать '
             'несколько заказов — один за другим.'],
@@ -28,8 +28,8 @@ class QuestionData:
 
 
 class OrderData:
-    param = 'data, station, button'
-    data = [
+    PARAM = 'data, station, button'
+    DATA = [
         [
             [
                 'Иван',

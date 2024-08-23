@@ -38,4 +38,4 @@ class OrderPage(BasePage):
 
     @allure.title('Ожидание смены адреса')
     def assert_url_change(self, url):
-        WebDriverWait(self.driver, 10).until(EC.url_changes(url))
+        WebDriverWait(self.driver, self.timer).until(EC.url_changes(url))
